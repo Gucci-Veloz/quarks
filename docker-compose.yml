@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - CHROMA_DB_DIR=/app/data/chroma
+      - EMBEDDING_MODEL=all-MiniLM-L6-v2
+    restart: unless-stopped 
