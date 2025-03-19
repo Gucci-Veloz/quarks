@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  api:
+  quark:
     build: .
     ports:
       - "8000:8000"
@@ -10,4 +10,4 @@ services:
     environment:
       - CHROMA_DB_DIR=/app/data/chroma
       - EMBEDDING_MODEL=all-MiniLM-L6-v2
-    restart: unless-stopped 
+    restart: unless-stopped
